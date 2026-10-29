@@ -1,7 +1,6 @@
 import { prisma } from "@/database/prisma";
 import { Request, Response, NextFunction } from "express";
 import z from "zod";
-import { email } from "zod/v4";
 
 export class DeliveriesController{
     async create(request: Request, response: Response, next: NextFunction){

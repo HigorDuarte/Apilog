@@ -8,5 +8,5 @@ const adapter = new PrismaPg({
 
 export const prisma = new PrismaClient({
     adapter,
-    log: ["query"]
+    log: ["error", "info"]
 })
