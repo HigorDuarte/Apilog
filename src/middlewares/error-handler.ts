@@ -8,7 +8,7 @@ export function errorHandler(error: any, request: Request, response: Response, n
     }
 
     if(error instanceof ZodError){
-        return response.status(400).json({message: "Validation Error", issues: error.errors})
+        return response.status(400).json({message: "Validation Error", issues: error.issues})
     }
 
     return response.status(500).json({message: `Internal server error`})

@@ -31,7 +31,7 @@ export class DeliveryLogsController{
 
     async show(request: Request, response: Response){
         const paramsSchema = z.object({
-            delivery_id: z.string().uuid(),
+            delivery_id: z.uuid(),
         })
 
         const {delivery_id} = paramsSchema.parse(request.params)
